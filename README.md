@@ -1,2 +1,2 @@
 # PortfolioPage
-This contains my portfolio website for 2024.
+This contains my portfolio website for the year 2024.
