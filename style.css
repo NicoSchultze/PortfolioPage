@@ -521,6 +521,7 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
+  padding-top: 3vh;
   height: 26vh;
   margin: 0 1rem;
 }
