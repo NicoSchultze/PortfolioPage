@@ -7,9 +7,48 @@
   padding: 0;
 }
 
+
+/* Light mode styles (Default) */
 body {
+  /* Define your light mode body styles */
+  color: #000000; /* Example text color */
   font-family: "Poppins", sans-serif;
+  background-color: #fff; /* Example background color */
+  /* Add other light mode styles for various elements */
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  /* Define your dark mode body styles */
+  color: #eee; /* Example text color in dark mode */
+  background-color: #222; /* Example background color in dark mode */
+  /* Add other dark mode styles for various elements */
+}
+
+/* Update styles for specific elements based on light/dark mode */
+/* Example: Links */
+body a {
+  color: rgb(0, 0, 0); /* Link color in light mode */
+}
+
+body.dark-mode a {
+  color: #ffffff; /* Link color in dark mode */
+}
+
+/* Example: Buttons */
+.btn {
+  background-color: #ffffff; /* Button color in light mode */
+  color: rgb(0, 0, 0); /* Button text color in light mode */
+}
+
+body.dark-mode .btn {
+  background-color: #ffffff; /* Button color in dark mode */
+  color: rgb(0, 0, 0);
+}
+
+/* Add more element-specific styles based on your website's structure */
+
+
 
 html {
   scroll-behavior: smooth;
@@ -256,6 +295,7 @@ section {
   gap: 1rem;
 }
 
+
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
@@ -487,4 +527,22 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* Styles for the dark mode button */
+#dark-mode-toggle {
+  position: fixed;
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+  z-index: 1000; /* Ensure it stays above other content */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Optional: Styles for the image inside the button */
+#dark-mode-toggle img {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  border: #222;
 }
