@@ -468,35 +468,38 @@ section {
 .experience-details-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  gap: 2rem;
+}
+
+.details-container {
+  width: 40%; /* Adjust width */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .article-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: center;
 }
 
 .article {
-  width: 200px; /* Set a fixed width for each article */
-  padding: 1.5rem; /* Adjust padding */
-  text-align: center; /* Center align text */
-  border-radius: 10px; /* Add border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+  width: 200px;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Make the boxes longer instead of wider */
-.article-container {
-  max-width: 1200px; /* Set a maximum width for the container */
-}
-
-
-.article:hover {
-  transform: translateY(-5px); /* Move the box slightly up on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add box-shadow on hover */
-}
 
 /* Custom icon styles */
 .article img.icon {
@@ -518,7 +521,7 @@ section {
 }
 
 article .icon {
-  cursor: default;
+  cursor: pointer;
 }
 
 /* PROJECTS SECTION */

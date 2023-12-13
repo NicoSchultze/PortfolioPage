@@ -6,6 +6,12 @@
   .about-containers {
     flex-wrap: wrap;
   }
+  #experience {
+    margin-bottom: 6rem; /* Increase the bottom margin of the experience section */
+  }
+  #projects {
+    margin-top: 6rem; /* Increase the top margin of the projects section */
+  }
   #contact,
   #projects {
     height: fit-content;
