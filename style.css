@@ -404,8 +404,7 @@ section {
   border-radius: 5%;
   overflow: hidden;
   position: relative;
-  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
-  transform-origin: center;
+  transition: transform 0.5s, box-shadow 0.3s;
 }
 
 .about-pic img {
@@ -414,7 +413,12 @@ section {
   object-fit: cover;
   border-radius: 5%;
   filter: grayscale(0%); /* Initially in color */
-  transition: filter 0.3s; /* Smooth transition for the filter */
+  transition: transform 0.5s; /* Smooth transition for transform */
+}
+
+/* Initial hover effect (for left to right movement) */
+.about-pic img:hover {
+  transform: translateX(20px); /* Slowly move from left to right */
 }
 
 /* Hover effect */
@@ -423,8 +427,10 @@ section {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
 }
 
+/* Hover effect for grayscale on image */
 .about-pic:hover img {
   filter: grayscale(100%); /* Turn into black and white on hover */
+  transform: translateX(0); /* Reset the horizontal movement */
 }
 
 
@@ -505,6 +511,13 @@ section {
 .article img.icon {
   width: 50px; /* Adjust icon width */
   height: 50px; /* Adjust icon height */
+}
+
+
+.icon img {
+  width: 100%; /* Make the SVG image fill its container */
+  height: 100%; /* Make the SVG image fill its container */
+  /* Other styles for the SVG image */
 }
 
 /* Text styles */

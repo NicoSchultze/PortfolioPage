@@ -11,7 +11,7 @@ function toggleDarkMode() {
 
   const isDarkMode = body.classList.contains('dark-mode');
   const darkModeToggle = document.getElementById('dark-mode-toggle');
-  const imgSrc = isDarkMode ? 'assets/sun.svg' : 'assets/moon.svg'; // Replace with your SVG file paths
+  const imgSrc = isDarkMode ? 'assets/SVG/sun.svg' : 'assets/SVG/moon.svg'; // Replace with your SVG file paths
   darkModeToggle.querySelector('img').src = imgSrc;
 }
 
