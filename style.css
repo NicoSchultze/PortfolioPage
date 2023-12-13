@@ -473,18 +473,48 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
 }
 
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+.article {
+  width: 200px; /* Set a fixed width for each article */
+  padding: 1.5rem; /* Adjust padding */
+  text-align: center; /* Center align text */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+/* Make the boxes longer instead of wider */
+.article-container {
+  max-width: 1200px; /* Set a maximum width for the container */
+}
+
+
+.article:hover {
+  transform: translateY(-5px); /* Move the box slightly up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add box-shadow on hover */
+}
+
+/* Custom icon styles */
+.article img.icon {
+  width: 50px; /* Adjust icon width */
+  height: 50px; /* Adjust icon height */
+}
+
+/* Text styles */
+.article h3 {
+  font-size: 1.25rem; /* Adjust heading font size */
+  margin: 0.5rem 0;
+}
+
+.article p {
+  font-size: 1rem; /* Adjust paragraph font size */
+  margin: 0;
+  color: rgb(85, 85, 85);
+  font-weight: 500;
 }
 
 article .icon {
