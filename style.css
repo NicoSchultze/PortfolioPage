@@ -216,7 +216,6 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -379,6 +378,8 @@ section {
 /* ABOUT SECTION */
 
 #about {
+  margin-bottom: 75px;
+  padding-top: 5vh;
   position: relative;
 }
 
@@ -433,8 +434,6 @@ section {
   transform: translateX(0); /* Reset the horizontal movement */
 }
 
-
-
 .arrow {
   position: absolute;
   right: -5rem;
@@ -444,7 +443,7 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
@@ -457,10 +456,11 @@ section {
 }
 
 
-
 /* EXPERIENCE SECTION */
 
 #experience {
+  margin-bottom: 50px;
+  padding-top: 5vh;
   position: relative;
 }
 
