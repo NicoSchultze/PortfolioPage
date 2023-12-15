@@ -286,6 +286,15 @@ body.dark-mode .section__text p {
   text-align: center;
 }
 
+/* Styling for the typewriter effect */
+#typewriter {
+  font-size: 3rem;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold; /* Adjust font weight as needed */
+  /* Add any other styles to match your design */
+}
+
 #socials-container {
   display: flex;
   justify-content: center;
