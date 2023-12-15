@@ -338,6 +338,7 @@ body.dark-mode .section__text p {
 }
 /* BUTTONS */
 
+/* Updated button styles */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -346,57 +347,58 @@ body.dark-mode .section__text p {
 
 .btn {
   font-weight: 600;
-  transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
   border-radius: 2rem;
-}
-
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover {
   cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+/* First button */
+.btn-color-1 {
+  background: #333; /* Dark grey background */
+  color: #fff; /* White text */
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: #555; /* Slightly lighter grey on hover */
 }
 
+/* Second button */
 .btn-color-2 {
-  background: none;
+  background: #fff; /* White background */
+  color: #333; /* Dark grey text */
+  border-color: #333;
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  background: #e0e0e0; /* Lighter grey on hover */
 }
 
-.btn-container {
-  gap: 1rem;
+/* Dark mode styles */
+.dark-mode .btn {
+  border-color: #aaa; /* Darker grey border in dark mode */
 }
 
-.dark-mode .btn-color-1,
+.dark-mode .btn-color-1 {
+  background: #222; /* Darker background color for dark mode */
+  color: #fff; /* White text in dark mode */
+}
+
+.dark-mode .btn-color-1:hover {
+  background: #444; /* Slightly lighter grey on hover in dark mode */
+}
+
 .dark-mode .btn-color-2 {
-  background: rgb(30, 30, 30); /* Dark background color */
-  border: rgb(163, 163, 163) 0.1rem solid;
-  color: white; /* Text color for dark mode */
+  background: #444; /* Darker background color for dark mode */
+  color: #fff; /* White text in dark mode */
+  border-color: #fff;
 }
 
-.dark-mode .btn-color-1:hover,.btn-color-2:hover {
-  background: rgb(0, 0, 0);
-  cursor: pointer;
-  border: rgb(255, 255, 255) 0.1rem solid;
-  color: white; /* Text color for the second button on hover */
+.dark-mode .btn-color-2:hover {
+  background: #666; /* Lighter grey on hover in dark mode */
 }
+
 
 /* ABOUT SECTION */
 
@@ -436,9 +438,15 @@ body.dark-mode .section__text p {
   height: 100%;
   object-fit: cover;
   border-radius: 5%;
-  filter: grayscale(0%); /* Initially in color */
-  transition: transform 0.5s; /* Smooth transition for transform */
+  filter: grayscale(0); /* Initially in color */
+  transition: transform 0.5s, filter 0.5s; /* Smooth transitions */
 }
+
+.about-pic:hover img {
+  transform: scale(1.1); /* Zoom out by 10% on hover */
+  filter: grayscale(100%); /* Convert to black and white */
+}
+
 
 .arrow {
   position: absolute;
@@ -460,6 +468,24 @@ body.dark-mode .section__text p {
   }
 }
 
+.middle-arrow {
+  position: absolute;
+  bottom: 5%;
+  right: 49%;
+  transform: translate(50%, 50%);
+  width: 40px;
+  height: 40px;
+  animation: arrowMovement 1s infinite alternate;
+}
+
+@keyframes arrowMovement {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
 
 .details-container {
   padding: 1.5rem;
