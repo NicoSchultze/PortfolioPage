@@ -21,12 +21,11 @@ body {
 body.dark-mode {
   /* Define your dark mode body styles */
   color: #eee; /* Example text color in dark mode */
-  background-color: #222; /* Example background color in dark mode */
+  background-color: #343434; /* Example background color in dark mode */
   /* Add other dark mode styles for various elements */
 }
 
 /* Update styles for specific elements based on light/dark mode */
-/* Example: Links */
 body a {
   color: rgb(0, 0, 0); /* Link color in light mode */
 }
@@ -34,20 +33,6 @@ body a {
 body.dark-mode a {
   color: #ffffff; /* Link color in dark mode */
 }
-
-/* Example: Buttons */
-.btn {
-  background-color: #ffffff; /* Button color in light mode */
-  color: rgb(0, 0, 0); /* Button text color in light mode */
-}
-
-body.dark-mode .btn {
-  background-color: #ffffff; /* Button color in dark mode */
-  color: rgb(0, 0, 0);
-}
-
-/* Add more element-specific styles based on your website's structure */
-
 
 
 html {
@@ -99,11 +84,9 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  /* Add other styles as required */
 }
 
-.logo:hover {
-  cursor: default;
-}
 
 /* HAMBURGER MENU */
 
@@ -243,18 +226,6 @@ section {
   border-radius: 50%; /* Make the container round */
   overflow: hidden; /* Hide overflow */
   position: relative; /* Position for the overlay */
-  animation: floatUpDown 2s 1 ease-in-out; /* Applies the animation */ 
-}
-@keyframes floatUpDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-40px); /* Adjust the floating height */
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .profile-pic img {
@@ -293,9 +264,12 @@ section {
   text-align: center;
 }
 
-
 .section__text p {
   font-weight: 600;
+}
+
+body.dark-mode .section__text p {
+  color: #248810; /* Change the text color for dark mode */
 }
 
 .section__text__p1 {
@@ -333,7 +307,6 @@ section {
   justify-content: center;
   gap: 1rem;
 }
-
 
 .btn {
   font-weight: 600;
@@ -373,6 +346,20 @@ section {
 
 .btn-container {
   gap: 1rem;
+}
+
+.dark-mode .btn-color-1,
+.dark-mode .btn-color-2 {
+  background: rgb(30, 30, 30); /* Dark background color */
+  border: rgb(163, 163, 163) 0.1rem solid;
+  color: white; /* Text color for dark mode */
+}
+
+.dark-mode .btn-color-1:hover,.btn-color-2:hover {
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+  border: rgb(255, 255, 255) 0.1rem solid;
+  color: white; /* Text color for the second button on hover */
 }
 
 /* ABOUT SECTION */

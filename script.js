@@ -14,8 +14,3 @@ function toggleDarkMode() {
   const imgSrc = isDarkMode ? 'assets/SVG/sun.svg' : 'assets/SVG/moon.svg'; // Replace with your SVG file paths
   darkModeToggle.querySelector('img').src = imgSrc;
 }
-
-// Optional: Check for the user's preferred mode (light/dark) and set it initially
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-  document.body.classList.add('dark-mode'); // Set initial dark mode if preferred
-}
