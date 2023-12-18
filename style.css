@@ -149,6 +149,11 @@ body.dark-mode .logo {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.dark-mode .menu-links{
+  background-color: rgb(30, 30, 30);
+  border-color: rgb(100, 100, 100);
+}
+
 .menu-links.open {
   max-height: 300px; /* Change the maximum height as needed */
   padding-top: 10px; /* Adjust top padding when menu is open */
@@ -406,27 +411,21 @@ body.dark-mode #typewriter {
 }
 
 .btn-color-2:hover {
-  background: #e0e0e0; /* Lighter grey on hover */
+  background: #e3e3e3; /* Lighter grey on hover */
 }
 
 /* Dark mode styles */
-.dark-mode .btn {
-  border-color: #aaa; /* Darker grey border in dark mode */
-}
-
 .dark-mode .btn-color-1 {
   background: #ffffff; /* Darker background color for dark mode */
   color: #666; /* White text in dark mode */
-  border-color: #666;
 }
 
 .dark-mode .btn-color-1:hover {
-  background: #666;
-  color: #fff; /* Slightly lighter grey on hover in dark mode */
+  background: #e3e3e3;
 }
 
 .dark-mode .btn-color-2 {
-  background: #444; /* Darker background color for dark mode */
+  background: #333; /* Darker background color for dark mode */
   color: #fff; /* White text in dark mode */
   border-color: #fff;
 }
