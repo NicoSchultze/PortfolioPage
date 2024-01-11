@@ -10,18 +10,15 @@
 
 /* Light mode styles (Default) */
 body {
-  /* Define your light mode body styles */
-  color: #000000; /* Example text color */
+  color: #000000; 
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, #ffffff, #f3f3f3); /* Example gradient background */
+  background: linear-gradient(to right, #ffffff, #f3f3f3); 
 }
 
 /* Dark mode styles */
 body.dark-mode {
-  /* Define your dark mode body styles */
-  color: #eee; /* Example text color in dark mode */
-  background: linear-gradient(to left, #373737, #000000); /* Example gradient background in dark mode */
-  /* Add other dark mode styles for various elements */
+  color: #eee; 
+  background: linear-gradient(to left, #373737, #000000); 
 }
 
 
@@ -117,7 +114,7 @@ body.dark-mode .logo {
 
 .hamburger-menu {
   position: relative;
-  z-index: 1000; /* Ensure the menu appears over other elements */
+  z-index: 1000;
 }
 
 .hamburger-icon {
@@ -136,13 +133,18 @@ body.dark-mode .logo {
   transition: all 0.3s ease-in-out;
 }
 
+/* Dark mode styles */
+.dark-mode .hamburger-icon span {
+  background-color: #fff;
+}
+
 .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
   background-color: #fff;
   border-radius: 10px;
-  padding: 0 10px; /* Adjust padding to preserve space when closed */
+  padding: 0 10px; 
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out; /* Update transition properties */
@@ -155,9 +157,9 @@ body.dark-mode .logo {
 }
 
 .menu-links.open {
-  max-height: 300px; /* Change the maximum height as needed */
-  padding-top: 10px; /* Adjust top padding when menu is open */
-  border: 2px solid #ccc; /* Add border when open */
+  max-height: 300px; 
+  padding-top: 10px; 
+  border: 2px solid #ccc; 
 }
 
 .menu-links a {
@@ -181,13 +183,13 @@ body.dark-mode .logo {
   list-style: none;
   padding: 0;
   margin: 0;
-  opacity: 0; /* Hide the content when closed */
-  pointer-events: none; /* Disable pointer events when closed */
+  opacity: 0; 
+  pointer-events: none; 
 }
 
 .menu-links.open ul {
-  opacity: 1; /* Show content when open */
-  pointer-events: auto; /* Enable pointer events when open */
+  opacity: 1; 
+  pointer-events: auto; 
 }
 
 .menu-links li {
@@ -247,8 +249,8 @@ section {
 
 /* Variables for border colors and shadow in light and dark modes */
 :root {
-  --border-light: rgba(255, 255, 255, 0.5); /* White border color for light mode */
-  --border-dark: rgba(0, 0, 0, 0.5); /* Black border color for dark mode */
+  --border-light: rgba(255, 255, 255, 0.5); 
+  --border-dark: rgba(0, 0, 0, 0.5); 
 }
 
 /* Styles for the profile picture */
@@ -258,21 +260,21 @@ section {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  border: 4px solid var(--border-light); /* Use light mode border color as default */
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Adjusted shadow properties */
+  border: 4px solid var(--border-light); 
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); 
 }
 
 /* Dark mode-specific styles */
 body.dark-mode .profile-pic {
-  border-color: var(--border-dark); /* Change border color in dark mode */
+  border-color: var(--border-dark); 
 }
 
 .profile-pic img {
-  width: 100%; /* Make sure the image takes the full width of the container */
-  height: 100%; /* Make sure the image takes the full height of the container */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  border-radius: 50%; /* Make the image round */
-  transition: transform 0.5s, filter 0.5s; /* Transition for smooth effect */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 50%;
+  transition: transform 0.5s, filter 0.5s; 
 }
 
 /* Overlay for hover effect */
@@ -283,7 +285,7 @@ body.dark-mode .profile-pic {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Change color and opacity as needed */
+  background-color: rgba(0, 0, 0, 0.5); 
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -295,8 +297,8 @@ body.dark-mode .profile-pic {
 
 /* Grayscale effect on hover */
 .profile-pic:hover img {
-  filter: grayscale(100%); /* Apply grayscale effect */
-  transform: scale(1.1); /* Scale the image a bit on hover */
+  filter: grayscale(100%); 
+  transform: scale(1.1); 
 }
 
 .section__text {
@@ -308,7 +310,7 @@ body.dark-mode .profile-pic {
 }
 
 body.dark-mode .section__text p {
-  color: #ffffff; /* Change the text color for dark mode */
+  color: #ffffff; 
 }
 
 .section__text__p1 {
@@ -325,32 +327,31 @@ body.dark-mode .section__text p {
 .title {
   font-size: 3rem;
   text-align: center;
-  background: linear-gradient(to bottom, #111111, #a8a8a8); /* Adjust colors as needed */
-  -webkit-background-clip: text; /* Clip the text to the background shape */
-  -webkit-text-fill-color: transparent; /* Hide the text fill */
+  background: linear-gradient(to bottom, #111111, #a8a8a8); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
 }
 
 .dark-mode .title {
-  background: linear-gradient(to bottom, #ffffff, #898989); /* Adjust colors as needed */
-  -webkit-background-clip: text; /* Clip the text to the background shape */
-  -webkit-text-fill-color: transparent; /* Hide the text fill */
+  background: linear-gradient(to bottom, #ffffff, #898989); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
 }
 
 /* Styling for the typewriter effect */
 #typewriter {
-  background: linear-gradient(to right, #5c5c5a, #18100d); /* Adjust colors as needed */
-  -webkit-background-clip: text; /* Clip the text to the background shape */
-  -webkit-text-fill-color: transparent; /* Hide the text fill */
+  background: linear-gradient(to right, #5c5c5a, #18100d); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
   font-size: 3rem;
   display: inline-block;
   text-align: center;
-  font-weight: bold; /* Adjust font weight as needed */
-  /* Add any other styles to match your design */
+  font-weight: bold; 
 }
 
 /* Dark Mode */
 body.dark-mode #typewriter {
-  background: linear-gradient(to left, #ffffff, #7d7d7d); /* Dark mode gradient */
+  background: linear-gradient(to left, #ffffff, #7d7d7d); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -367,11 +368,11 @@ body.dark-mode #typewriter {
 .icon {
   cursor: pointer;
   height: 2rem;
-  transition: transform 0.3s ease; /* Adding a smooth transition */
+  transition: transform 0.3s ease; 
 }
 
 .icon:hover {
-  transform: scale(1.2); /* Scale the icon slightly on hover */
+  transform: scale(1.2); 
 }
 
 
@@ -395,29 +396,29 @@ body.dark-mode #typewriter {
 
 /* First button */
 .btn-color-1 {
-  background: #333; /* Dark grey background */
-  color: #fff; /* White text */
+  background: #333; 
+  color: #fff; 
 }
 
 .btn-color-1:hover {
-  background: #555; /* Slightly lighter grey on hover */
+  background: #555; 
 }
 
 /* Second button */
 .btn-color-2 {
-  background: #fff; /* White background */
-  color: #333; /* Dark grey text */
+  background: #fff; 
+  color: #333; 
   border-color: #333;
 }
 
 .btn-color-2:hover {
-  background: #e3e3e3; /* Lighter grey on hover */
+  background: #e3e3e3; 
 }
 
 /* Dark mode styles */
 .dark-mode .btn-color-1 {
-  background: #ffffff; /* Darker background color for dark mode */
-  color: #666; /* White text in dark mode */
+  background: #ffffff; 
+  color: #666; 
 }
 
 .dark-mode .btn-color-1:hover {
@@ -425,13 +426,13 @@ body.dark-mode #typewriter {
 }
 
 .dark-mode .btn-color-2 {
-  background: #333; /* Darker background color for dark mode */
-  color: #fff; /* White text in dark mode */
+  background: #333; 
+  color: #fff; 
   border-color: #fff;
 }
 
 .dark-mode .btn-color-2:hover {
-  background: #666; /* Lighter grey on hover in dark mode */
+  background: #666; 
 }
 
 
@@ -465,7 +466,7 @@ body.dark-mode #typewriter {
   border-radius: 5%;
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .about-pic img {
@@ -473,13 +474,13 @@ body.dark-mode #typewriter {
   height: 100%;
   object-fit: cover;
   border-radius: 5%;
-  filter: grayscale(0); /* Initially in color */
-  transition: transform 0.5s, filter 0.5s; /* Smooth transitions */
+  filter: grayscale(0); 
+  transition: transform 0.5s, filter 0.5s; 
 }
 
 .about-pic:hover img {
-  transform: scale(1.1); /* Zoom out by 10% on hover */
-  filter: grayscale(100%); /* Convert to black and white */
+  transform: scale(1.1); 
+  filter: grayscale(100%); 
 }
 
 
@@ -487,19 +488,18 @@ body.dark-mode #typewriter {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
-  width: 60px; /* Adjust arrow width */
-  height: 60px; /* Adjust arrow height */
-  /* Add other arrow styles */
-  animation: arrowMovement 1s infinite alternate; /* Set up animation */
+  width: 60px;
+  height: 60px; 
+  animation: arrowMovement 1s infinite alternate; 
 }
 
 /* Keyframes for arrow movement */
 @keyframes arrowMovement {
   0% {
-    transform: translateY(0); /* Initial position */
+    transform: translateY(0); 
   }
   100% {
-    transform: translateY(20px); /* Move the arrow down */
+    transform: translateY(20px);
   }
 }
 
@@ -533,8 +533,8 @@ body.dark-mode #typewriter {
 }
 
 body.dark-mode .details-container {
-  border-color: rgb(100, 100, 100); /* Dark mode border color */
-  background: rgb(30, 30, 30); /* Dark mode background color */
+  border-color: rgb(100, 100, 100);
+  background: rgb(30, 30, 30); 
   border-color: rgb(255, 255, 255);
   text-align: center;
 }
@@ -571,7 +571,7 @@ body.dark-mode .details-container {
 }
 
 .details-container {
-  width: 40%; /* Adjust width */
+  width: 40%; 
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -602,25 +602,24 @@ body.dark-mode .details-container {
 
 /* Custom icon styles */
 .article img.icon {
-  width: 50px; /* Adjust icon width */
-  height: 50px; /* Adjust icon height */
+  width: 50px;
+  height: 50px; 
 }
 
 
 .icon img {
-  width: 100%; /* Make the SVG image fill its container */
-  height: 100%; /* Make the SVG image fill its container */
-  /* Other styles for the SVG image */
+  width: 100%; 
+  height: 100%; 
 }
 
 /* Text styles */
 .article h3 {
-  font-size: 1.25rem; /* Adjust heading font size */
+  font-size: 1.25rem; 
   margin: 0.5rem 0;
 }
 
 .article p {
-  font-size: 1rem; /* Adjust paragraph font size */
+  font-size: 1rem; 
   margin: 0;
   color: rgb(85, 85, 85);
   font-weight: 500;
@@ -640,14 +639,12 @@ article .icon {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
-  /* Other styles */
 }
 
 /* Dark Mode */
 body.dark-mode .color-container {
-  border-color: rgb(255, 255, 255); /* Dark mode border color */
-  background: rgb(30, 30, 30); /* Dark mode background color */
-  /* Other styles for dark mode */
+  border-color: rgb(255, 255, 255); 
+  background: rgb(30, 30, 30); 
 }
 
 
@@ -689,20 +686,20 @@ body.dark-mode .project-title {
   background-color: #fafafa;
   margin: 2rem auto;
   padding: 0.5rem;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Adding transitions */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
 .dark-mode .contact-info-upper-container {
   border: 0.1rem solid rgb(255, 255, 255);
-  border-color: rgb(255, 255, 255); /* Dark mode border color */
-  background: rgb(30, 30, 30); /* Dark mode background color */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Adding transitions */
+  border-color: rgb(255, 255, 255); 
+  background: rgb(30, 30, 30); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
 /* Apply more pronounced hover effect on contact info container */
 .contact-info-upper-container:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adding more pronounced box shadow on hover */
-  transform: scale(1.05); /* Enlarge the container on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+  transform: scale(1.05); 
 }
 
 .contact-info-container {
@@ -739,9 +736,9 @@ footer p {
 /* Styles for the dark mode button */
 #dark-mode-toggle {
   position: fixed;
-  top: 20px; /* Adjust the top position as needed */
-  left: 20px; /* Adjust the left position as needed */
-  z-index: 1000; /* Ensure it stays above other content */
+  top: 20px;
+  left: 20px; 
+  z-index: 1000; 
   background: transparent;
   border: none;
   cursor: pointer;
@@ -751,23 +748,22 @@ footer p {
 #dark-mode-toggle img {
   width: 40px;
   height: 40px;
-  border: none; /* Remove border */
-  transition: transform 0.3s ease, filter 0.3s ease; /* Adding a smooth transition for filter changes */
-  filter: brightness(150%) drop-shadow(0 0 5px #4f9ef9); /* Adjust brightness and add drop shadow */
+  border: none; 
+  transition: transform 0.3s ease, filter 0.3s ease; 
+  filter: brightness(150%) drop-shadow(0 0 5px #4f9ef9); 
 }
 
 /* Apply color change on hover */
 #dark-mode-toggle img:hover {
-  filter: brightness(100%) drop-shadow(0 0 5px #0800ff); /* Change brightness and shadow color on hover */
+  filter: brightness(100%) drop-shadow(0 0 5px #0800ff); 
 }
 
 /* Dark Mode */
 body.dark-mode #dark-mode-toggle img {
-  filter: brightness(80%) drop-shadow(0 0 5px #faa609); /* Adjust brightness and shadow color for dark mode */
-  /* Other styles for dark mode */
+  filter: brightness(80%) drop-shadow(0 0 5px #faa609); 
 }
 
 /* Apply color change on hover */
 body.dark-mode #dark-mode-toggle img:hover {
-  filter: brightness(100%) drop-shadow(0 0 5px #fffb00); /* Change brightness and shadow color on hover */
+  filter: brightness(100%) drop-shadow(0 0 5px #fffb00); 
 }

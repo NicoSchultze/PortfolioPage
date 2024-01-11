@@ -7,10 +7,10 @@
     flex-wrap: wrap;
   }
   #experience {
-    margin-bottom: 6rem; /* Increase the bottom margin of the experience section */
+    margin-bottom: 6rem; 
   }
   #projects {
-    margin-top: 6rem; /* Increase the top margin of the projects section */
+    margin-top: 6rem; 
   }
   #contact,
   #projects {
@@ -59,9 +59,17 @@
     height: 40vh;
   }
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
   }
+
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+    overflow: hidden;
+  }
+
   article {
     font-size: 1rem;
   }
@@ -93,10 +101,27 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 100%;
+    height: auto;
     justify-content: center;
+    display: flex; 
+    align-items: center; 
+    overflow: hidden; 
   }
+
+  .section__pic-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; 
+  }
+
+  .about-pic img {
+    width: 100%; 
+    height: auto; 
+    max-height: 300px; 
+    border-radius: 0; 
+  }
+
   .section__text__p2 {
     font-size: 1.25rem;
   }
