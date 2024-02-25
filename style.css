@@ -681,11 +681,13 @@ body.dark-mode .project-title {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 2rem;
   border: 0.1rem solid rgb(163, 163, 163);
   background-color: #fafafa;
   margin: 2rem auto;
   padding: 0.5rem;
+  max-width: 100%;
   transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
@@ -708,11 +710,10 @@ body.dark-mode .project-title {
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  flex-wrap: wrap; /* Allow the container to wrap its contents */
+  max-width: 100%; /* Limit the maximum width of the container */
 }
 
-.contact-info-container p {
-  font-size: larger;
-}
 
 .contact-icon {
   cursor: default;
