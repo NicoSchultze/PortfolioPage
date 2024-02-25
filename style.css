@@ -53,7 +53,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 15vh;
 }
 
 .nav-links {
@@ -227,7 +227,6 @@ body.dark-mode .logo {
 /* SECTIONS */
 
 section {
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -235,6 +234,8 @@ section {
 
 .section-container {
   display: flex;
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
 }
 
 /* PROFILE SECTION */
@@ -244,7 +245,7 @@ section {
   justify-content: center;
   align-items: center; 
   gap: 5rem;
-  height: 80vh;
+  margin-top: 8%;
 }
 
 /* Variables for border colors and shadow in light and dark modes */
@@ -439,9 +440,8 @@ body.dark-mode #typewriter {
 /* ABOUT SECTION */
 
 #about {
-  margin-bottom: 75px;
-  padding-top: 5vh;
   position: relative;
+  margin-top: 10%;
 }
 
 .about-containers {
@@ -451,7 +451,6 @@ body.dark-mode #typewriter {
 }
 
 .about-details-container {
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -548,8 +547,7 @@ body.dark-mode .details-container {
 /* EXPERIENCE SECTION */
 
 #experience {
-  margin-bottom: 50px;
-  padding-top: 5vh;
+  margin-top: 10%;
   position: relative;
 }
 
@@ -633,6 +631,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-top: 10%;
 }
 
 /* Light Mode */
@@ -675,7 +674,7 @@ body.dark-mode .project-title {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  margin-top: 10%;
 }
 
 .contact-info-upper-container {

@@ -1,16 +1,6 @@
 @media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
   .about-containers {
     flex-wrap: wrap;
-  }
-  #experience {
-    margin-bottom: 6rem; 
-  }
-  #projects {
-    margin-top: 6rem; 
   }
   #contact,
   #projects {
@@ -41,7 +31,7 @@
     height: fit-content;
   }
   section {
-    margin: 0 5%;
+    margin: 10% 5%;
   }
   .section__pic-container {
     width: 275px;
@@ -54,20 +44,19 @@
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: auto;
-    margin-bottom: 0;
-  }
-
   .profile-pic img {
     width: 100%;
     height: auto;
     border-radius: 50%; 
     overflow: hidden;
+  }
+
+  #profile,
+  #about, 
+  #experience, 
+  #projects, 
+  #contact{
+    margin-top: 22%;
   }
 
   article {
