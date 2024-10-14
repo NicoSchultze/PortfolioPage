@@ -1,0 +1,769 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Light mode styles (Default) */
+body {
+  color: #000000; 
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #ffffff, #f3f3f3); 
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  color: #eee; 
+  background: linear-gradient(to left, #373737, #000000); 
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(60, 70, 64);
+}
+
+/* Dark Mode */
+body.dark-mode p{
+  color: rgb(177, 177, 177);
+}
+  
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+/* Light Mode */
+a {
+  color: black;
+  text-decoration: none;
+  background: linear-gradient(to right, #646463, #211914);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  transition: text-decoration-color 0.3s; /* Add transition for smooth effect */
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #646463; /* Use the same color as the gradient */
+}
+
+/* Dark Mode */
+body.dark-mode a {
+  color: white; /* Text color in dark mode */
+  background: linear-gradient(to left,   #ffffff, #7d7d7d); /* Dark mode gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode a:hover {
+  text-decoration-color: white; /* Use white color for underline in dark mode */
+}
+
+.logo {
+  font-size: 2.5rem;
+  background: linear-gradient(to left, #646463, #211914); /* Light mode gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .logo {
+  background: linear-gradient(to right, #ffffff, #7d7d7d); /* Dark mode gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  z-index: 1000;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark mode styles */
+.dark-mode .hamburger-icon span {
+  background-color: #fff;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0 10px; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out; /* Update transition properties */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .menu-links{
+  background-color: rgb(30, 30, 30);
+  border-color: rgb(100, 100, 100);
+}
+
+.menu-links.open {
+  max-height: 300px; 
+  padding-top: 10px; 
+  border: 2px solid #ccc; 
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.menu-links a:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  transform: scale(1.1);
+}
+
+.menu-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0; 
+  pointer-events: none; 
+}
+
+.menu-links.open ul {
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+.menu-links li {
+  margin-bottom: 10px;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 5rem;
+  margin-top: 8%;
+}
+
+/* Variables for border colors and shadow in light and dark modes */
+:root {
+  --border-light: rgba(255, 255, 255, 0.5); 
+  --border-dark: rgba(0, 0, 0, 0.5); 
+}
+
+/* Styles for the profile picture */
+.profile-pic {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid var(--border-light); 
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); 
+}
+
+/* Dark mode-specific styles */
+body.dark-mode .profile-pic {
+  border-color: var(--border-dark); 
+}
+
+.profile-pic img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 50%;
+  transition: transform 0.5s, filter 0.5s; 
+}
+
+/* Overlay for hover effect */
+.profile-pic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Hover effect */
+.profile-pic:hover::before {
+  opacity: 1;
+}
+
+/* Grayscale effect on hover */
+.profile-pic:hover img {
+  filter: grayscale(100%); 
+  transform: scale(1.1); 
+}
+
+.section__text {
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+body.dark-mode .section__text p {
+  color: #ffffff; 
+}
+
+.section__text__p1 {
+  text-align: center;
+  color: #000000;
+}
+
+.section__text__p2 {
+  color: #000000;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #111111, #a8a8a8); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+.dark-mode .title {
+  background: linear-gradient(to bottom, #ffffff, #898989); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+/* Styling for the typewriter effect */
+#typewriter {
+  background: linear-gradient(to right, #5c5c5a, #18100d); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-size: 3rem;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold; 
+}
+
+/* Dark Mode */
+body.dark-mode #typewriter {
+  background: linear-gradient(to left, #ffffff, #7d7d7d); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  transition: transform 0.3s ease; 
+}
+
+.icon:hover {
+  transform: scale(1.2); 
+}
+
+
+/* BUTTONS */
+
+/* Updated button styles */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+/* First button */
+.btn-color-1 {
+  background: #333; 
+  color: #fff; 
+}
+
+.btn-color-1:hover {
+  background: #555; 
+}
+
+/* Second button */
+.btn-color-2 {
+  background: #fff; 
+  color: #333; 
+  border-color: #333;
+}
+
+.btn-color-2:hover {
+  background: #e3e3e3; 
+}
+
+/* Dark mode styles */
+.dark-mode .btn-color-1 {
+  background: #ffffff; 
+  color: #666; 
+}
+
+.dark-mode .btn-color-1:hover {
+  background: #e3e3e3;
+}
+
+.dark-mode .btn-color-2 {
+  background: #333; 
+  color: #fff; 
+  border-color: #fff;
+}
+
+.dark-mode .btn-color-2:hover {
+  background: #666; 
+}
+
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  margin-top: 10%;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  width: 1000px;
+  height: 450px;
+  border-radius: 5%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.about-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+  filter: grayscale(0); 
+  transition: transform 0.5s, filter 0.5s; 
+}
+
+.about-pic:hover img {
+  transform: scale(1.1); 
+  filter: grayscale(100%); 
+}
+
+
+.right-arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+  width: 60px;
+  height: 60px; 
+  animation: arrowMovement 1s infinite alternate; 
+}
+
+/* Keyframes for arrow movement */
+@keyframes arrowMovement {
+  0% {
+    transform: translateY(0); 
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.middle-arrow {
+  position: absolute;
+  bottom: 5%;
+  right: 48%;
+  transform: translate(50%, 50%);
+  width: 60px;
+  height: 60px;
+  animation: arrowMovement 1s infinite alternate;
+}
+
+@keyframes arrowMovement {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: rgb(255, 255, 255);
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+body.dark-mode .details-container {
+  border-color: rgb(100, 100, 100);
+  background: rgb(30, 30, 30); 
+  border-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  margin-top: 10%;
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.dark-mode .experience-sub-title {
+  color: rgb(255, 255, 255);
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.details-container {
+  width: 40%; 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.article {
+  width: 200px;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Custom icon styles */
+.article img.icon {
+  width: 50px;
+  height: 50px; 
+}
+
+
+.icon img {
+  width: 100%; 
+  height: 100%; 
+}
+
+/* Text styles */
+.article h3 {
+  font-size: 1.25rem; 
+  margin: 0.5rem 0;
+}
+
+.article p {
+  font-size: 1rem; 
+  margin: 0;
+  color: rgb(85, 85, 85);
+  font-weight: 500;
+}
+
+article .icon {
+  cursor: pointer;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+  margin-top: 10%;
+}
+
+/* Light Mode */
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+/* Dark Mode */
+body.dark-mode .color-container {
+  border-color: rgb(255, 255, 255); 
+  background: rgb(30, 30, 30); 
+}
+
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+body.dark-mode .project-title {
+  margin: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  background-color: #fafafa;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  max-width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+.dark-mode .contact-info-upper-container {
+  border: 0.1rem solid rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255); 
+  background: rgb(30, 30, 30); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+/* Apply more pronounced hover effect on contact info container */
+.contact-info-upper-container:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+  transform: scale(1.05); 
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  flex-wrap: wrap; /* Allow the container to wrap its contents */
+  max-width: 100%; /* Limit the maximum width of the container */
+}
+
+
+.contact-icon {
+  cursor: default;
+  height: 2.5rem;
+}
+
+
+
+/* FOOTER SECTION */
+
+footer {
+  padding-top: 3vh;
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Styles for the dark mode button */
+#dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px; 
+  z-index: 1000; 
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Optional: Styles for the image inside the button */
+#dark-mode-toggle img {
+  width: 40px;
+  height: 40px;
+  border: none; 
+  transition: transform 0.3s ease, filter 0.3s ease; 
+  filter: brightness(150%) drop-shadow(0 0 5px #4f9ef9); 
+}
+
+/* Apply color change on hover */
+#dark-mode-toggle img:hover {
+  filter: brightness(100%) drop-shadow(0 0 5px #0800ff); 
+}
+
+/* Dark Mode */
+body.dark-mode #dark-mode-toggle img {
+  filter: brightness(80%) drop-shadow(0 0 5px #faa609); 
+}
+
+/* Apply color change on hover */
+body.dark-mode #dark-mode-toggle img:hover {
+  filter: brightness(100%) drop-shadow(0 0 5px #fffb00); 
+}
